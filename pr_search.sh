@@ -11,7 +11,7 @@ token="YOUR_GITHUB_TOKEN"
 page=1
 while true; do
     # Use GitHub API to get a page of PRs (both open and closed)
-    response=$(curl -s -w "\n%{http_code}" -H "Authorization: token $token" -H "Accept: application/vnd.github.v3+json" \
+    response=$(curl -s -H "Authorization: token $token" -H "Accept: application/vnd.github.v3+json" \
         "https://api.github.com/repos/$owner/$repo/pulls?state=all&per_page=100&page=$page")
     
     prs=$(echo "$response" | jq -r '.[].number')
