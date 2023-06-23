@@ -6,7 +6,7 @@ repo=$2
 search_text=$3
 
 # Your GitHub token, replace "YOUR_GITHUB_TOKEN" with your actual token
-token="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"
+token="YOUR_GITHUB_TOKEN"
 
 page=1
 while true; do
